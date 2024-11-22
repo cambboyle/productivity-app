@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Soft background */
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Custom Title Bar */
+.custom-title-bar {
+    position: fixed; /* Fix title bar to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Span full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 35px; /* Title bar height */
+    z-index: 9999; /* Ensures it's above other elements */
+    box-sizing: border-box; /* Ensures padding is included in height */
+}
+
+/* Title text */
+.app-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    font-family: "Pacifico", cursive;
+}
+
+/* Burger menu */
+.burger-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px; /* Small space from the title */
+}
+
+/* Window control buttons (minimize, maximize, close) */
+.window-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 105px;
+}
+
+.control-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.minimize {
+    color: #f1c40f; /* Yellow */
+}
+
+.maximize {
+    color: #2ecc71; /* Green */
+}
+
+.close {
+    color: #e74c3c; /* Red */
+}
+
+/* No drag area for title bar */
+.no-drag {
+    -webkit-app-region: no-drag;
+}
+
+/* Adjust the rest of the page to avoid being hidden by the fixed title bar */
+.app {
+    padding-top: 35px; /* Push content down to avoid overlap with fixed title bar */
+    height: 100%;
+}

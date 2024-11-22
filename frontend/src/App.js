@@ -1,12 +1,14 @@
-// src/App.js
 import React from "react";
 import Navbar from "./components/Navbar";
-import "./App.css";
+import MainContent from "./components/MainContent";
+import CustomTitleBar from "./components/CustomTitleBar";
+import "./index.css";
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <div className="app">
+      <CustomTitleBar />
+      <MainContent />
     </div>
   );
 }

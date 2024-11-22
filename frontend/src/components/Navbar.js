@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="logo">
-          <h1 className="title-text">mica.</h1>
+    <>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <button className="burger-menu">☰</button>
+          <h1 className="navbar-title">mica.</h1>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 
